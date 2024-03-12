@@ -5,8 +5,18 @@ import { PokemonContext } from '../context/PokemonContext';
 
 const Navigation = () => {
 
-	const context = useContext(PokemonContext);
-	console.log(context);
+	const { onInputChange, valueSearch, onResetForm } = useContext(PokemonContext);
+
+	const navigate = useNavigate();
+
+	const onSearchSubmit = (e) => {
+		e.preventDefault()
+		navigate('/search', {
+			state: valueSearch
+		})
+		onResetForm();
+	}
+
 	return (
 		<>
 			<Navbar className='container'>
@@ -20,15 +30,15 @@ const Navigation = () => {
 					</Link>
 
 					<Form
-					// onSubmit={onSearchSubmit}
+						onSubmit={onSearchSubmit}
 					>
 						<div className='form-group d-flex gap-2'>
 							<FormControl
 								type='search'
 								name='valueSearch'
 								id=''
-								// value={valueSearch}
-								// onChange={onInputChange}
+								value={valueSearch}
+								onChange={onInputChange}
 								placeholder='Buscar nombre de pokemon'
 							/>
 							<Button className='btn-search d-flex' type='submit'>

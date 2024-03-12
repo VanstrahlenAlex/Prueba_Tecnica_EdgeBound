@@ -99,6 +99,46 @@ button:focus-visible {
 	transition: all 0.2s ease-in-out; 
 }
 
+.filter-by-type {
+	display: flex;
+	flex-direction: column;
+
+	gap: 20px;
+}
+
+.filter-by-type span {
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.group-type {
+	display: flex;
+	gap: 10px;
+
+	margin-left: 15px;
+}
+
+.group-type label {
+	cursor: pointer;
+}
+
+.container-loader{
+	display: flex;
+	justify-content: center;
+	margin: 200px 0;
+}
+
+.container-btn-load-more{
+	display: flex;
+	justify-content: center;
+
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.container-filters.active {
+	left: 0;
+}
 
 /* Types of Pokemon */
 .water {

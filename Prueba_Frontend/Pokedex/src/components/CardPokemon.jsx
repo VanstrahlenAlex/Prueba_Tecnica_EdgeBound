@@ -12,7 +12,7 @@ const CardPokemon = ({ pokemon }) => {
 				<span className='p-2'>N° {pokemon.id}</span>
 				<Card.Img variant="top" src={pokemon.sprites.other.dream_world.front_default} alt={`Pokemon ${pokemon.name}`} style={{ height: '200px', backgroundColor: '#E8EBF0' }} />
 				<Card.Body>
-					<Card.Title className='mb-4 text-uppercase'>{pokemon.name}</Card.Title>
+					<Card.Title className='mb-3 text-uppercase'>{pokemon.name}</Card.Title>
 					<Card.Text truncate className='mb-2'>
 						<div>
 							{pokemon.types.map(type => (

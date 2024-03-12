@@ -39,7 +39,7 @@ const PokemonProvider = ({ children }) => {
 			...results
 		])
 		setLoading(false)
-		console.log(results);
+		//console.log(results);
 	}
 
 	// Llamar a todos los pokemons
@@ -59,7 +59,7 @@ const PokemonProvider = ({ children }) => {
 		const results = await Promise.all(promises)
 		setGlobalPokemons(results)
 		setLoading(false)
-		console.log(results);
+		//console.log(results);
 	}
 
 	//Llamar a un pokemon por Id
@@ -72,11 +72,16 @@ const PokemonProvider = ({ children }) => {
 
 	useEffect(() => {
 		getAllPokemons();
-	}, [])
+	}, [offset])
 
 	useEffect(() => {
 		getGlobalPokemons();
 	}, [])
+
+	// Cargar mas Pokemons
+	const onClickLoadMore = () => {
+		setOffset(offset + 50)
+	}
 
 	return (
 		<>
@@ -88,8 +93,16 @@ const PokemonProvider = ({ children }) => {
 					allPokemons,
 					globalPokemons,
 					getPokemonById,
-					// loading,
-					// active,
+					onClickLoadMore,
+					//Loader 
+					loading,
+					setLoading,
+
+					//Boton Filter
+					active,
+					setActive,
+					// Filter Card Checkboxes
+
 					// offset,
 				}
 			}>
