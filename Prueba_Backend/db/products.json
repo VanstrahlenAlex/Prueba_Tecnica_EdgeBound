@@ -1,0 +1,49 @@
+{
+	"products": [
+		{
+			"name": "Samsung Galaxy",
+			"category": "electronics"
+		},
+		{
+			"name": "Motorola V3",
+			"category": "electronics"
+		},
+		{
+			"name": "Iphone 12",
+			"category": "electronics"
+		},
+		{
+			"name": "Iphone 13",
+			"category": "electronics"
+		},
+		{
+			"name": "Iphone 14",
+			"category": "electronics"
+		},
+		{
+			"name": "Iphone 15",
+			"category": "electronics"
+		},
+		{
+			"name": "Skippy",
+			"category": "grocery store"
+		},
+		{
+			"name": "Blackberry jam",
+			"category": "grocery store"
+		},
+		{
+			"name": "Trululus",
+			"category": "grocery store"
+		},
+		{
+			"name": "Papas Fritas",
+			"category": "grocery store"
+		},
+		{
+			"name": "Gaseosa Coca Cola",
+			"category": "grocery store"
+		}
+	]
+}
+
