@@ -10,6 +10,7 @@
 Para el primer ejemplo utilizar esta api: 
 http://localhost:8080/api/search?filter=Samsung
 
+Para el segundo ejemplo utilicé MongoDB para el servidor
 Para el segundo ejemplo utilizar esta api: 
 http://localhost:8080/api/productos?filter=trululu
 
