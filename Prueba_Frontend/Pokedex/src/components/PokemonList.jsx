@@ -7,7 +7,7 @@ import Loader from "./Loader";
 
 const PokemonList = () => {
 
-	const { allPokemons, loading } = useContext(PokemonContext)
+	const { allPokemons, loading, filteredPokemons } = useContext(PokemonContext)
 
 	return (
 		<>
@@ -15,14 +15,21 @@ const PokemonList = () => {
 				loading ? (<Loader />) : (
 					<div className="bg-light card-list p-4 ">
 						<Row xs={1} md={2} lg={3} xl={4}>
-							{allPokemons.map(pokemon => (
-								<CardPokemon pokemon={pokemon} key={pokemon.id} />
-							))}
-						</Row>
-					</div>
+							{filteredPokemons.length ? (
+								<>
+									{filteredPokemons.map(pokemon => (<CardPokemon pokemon={pokemon} key={pokemon.id} />))}
+								</>
+							) : (
+								<>
+								{allPokemons.map(pokemon => (<CardPokemon pokemon={pokemon} key={pokemon.id} />))}
+								</>
+							)}
+
+					</Row>
+					</div >
 				)
 			}
-			
+
 		</>
 	)
 }

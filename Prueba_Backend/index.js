@@ -1,13 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import productoRoutes from './routes/productoRoutes.js';
 
 //MongoDB
 import conectarDB from './config/db.js';
 
 //Inicio de App
 const app = express();
-
+app.use(express.json());
 
 //MongoDB
 conectarDB();
@@ -20,7 +21,7 @@ console.log(process.env.PORT);
 const productsData = fs.readFileSync('./db/products.json');
 const products = JSON.parse(productsData).products;
 
-app.get('/search', (req, res) => {
+app.get('/api/search', (req, res) => {
     const filter = req.query.filter;
     let foundProducts = [];
 
@@ -36,6 +37,9 @@ app.get('/search', (req, res) => {
 
     res.json({ foundProducts, suggestedProducts });
 });
+
+//Routing
+app.use('/api/productos', productoRoutes)
 
 const port = process.env.PORT || 8001;
 

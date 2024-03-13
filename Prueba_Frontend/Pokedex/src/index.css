@@ -111,6 +111,47 @@ button:focus-visible {
 	font-size: 22px;
 }
 
+/* Btn Filter */
+.container-filter {
+	display: flex;
+}
+
+.icon-filter {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.icon-filter .icon {
+	width: 30px;
+	height: 30px;
+	stroke: #555;
+}
+
+/* Container Filters */
+.container-filters {
+	display: flex;
+	justify-content: center;
+
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 250px;
+
+	color: #555;
+	background-color: #f2f2f2;
+	height: 100%;
+	padding-top: 140px;
+	transition: all 0.3s linear;
+}
+
+.container-filters.active {
+	left: 0;
+}
+
 .group-type {
 	display: flex;
 	gap: 10px;

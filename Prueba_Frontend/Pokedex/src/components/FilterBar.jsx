@@ -6,9 +6,8 @@ const FilterBar = () => {
 	const { active, handleCheckbox } = useContext(PokemonContext);
 	return (
 		<>
-			<div className={`containers-filters ${active ? 'active' : ''}`}>
-				<div className="filter by type">
-					<span>Tipo</span>
+			<div className={`container-filters ${active ? 'active' : ''}`}>
+				<div className="filter-by-type">
 					<div className='group-type'>
 						<input
 							type='checkbox'
@@ -173,6 +172,7 @@ const FilterBar = () => {
 					</div>
 				</div>
 			</div>
+
 
 		</>
 	)
